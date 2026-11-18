@@ -1,71 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: transparent;
+}
+
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #c2cac4;
     font-family: Arial, Helvetica, sans-serif;
     color: #f1f5f1;
-    margin: 0;
-    padding: 15px;
-    line-height: 1.5;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 1rem;
 }
 
-header, nav, section, footer {
+header,
+nav,
+section,
+footer {
     width: 90%;
     max-width: 1000px;
-    margin: 0 auto 20px auto;
-    box-sizing: border-box;
+    margin: 0 auto 1.25rem auto;
 }
 
 header {
     background-color: #2b4535;
     color: #ffffff;
     text-align: center;
-    padding: 20px;
-    border-radius: 8px;
+    padding: 1.5rem 1.25rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
-    margin: 0;
     font-size: 2rem;
     color: #ffffff;
+    letter-spacing: 1px;
 }
 
 header p {
     color: #e0ede3;
-    margin: 8px 0 0 0;
+    margin-top: 0.5rem;
 }
 
 nav {
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
 nav a {
-    display: inline-block;
     background-color: #3a5a47;
     color: #ffffff;
     text-decoration: none;
-    padding: 8px 14px;
-    margin: 4px;
+    padding: 0.5rem 1rem;
     border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 nav a:hover {
     background-color: #86a872;
+    transform: translateY(-2px);
 }
 
 section {
     background-color: #76847a;
     color: #ffffff;
-    padding: 20px;
+    padding: 1.5rem;
     border: 2px solid #86a08e;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18);
 }
 
 h2 {
-    color: #e3f2e6;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
     font-size: 1.4rem;
-    margin-top: 0;
+    text-align: center;
+    color: #e3f2e6;
+    margin-bottom: 1rem;
 }
 
 p {
@@ -78,15 +96,13 @@ p {
     color: #2b4535;
 }
 
-#datos-generales h2 {
-    color: #2b4535;
-}
-
+#datos-generales h2,
 #datos-generales p {
     color: #2b4535;
 }
 
 .formulario {
+    width: 100%;
     max-width: 500px;
     margin: 0 auto;
 }
@@ -94,47 +110,68 @@ p {
 .formulario label {
     display: block;
     color: #ffffff;
-    margin: 10px 0 0 0;
+    font-weight: bold;
+    margin-top: 0.75rem;
 }
 
-input, select, button {
+input,
+select,
+button {
     display: block;
     width: 100%;
-    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
-    border-radius: 5px;
+    border-radius: 6px;
 }
 
-input, select {
+input,
+select {
     background-color: #eff3ed;
     color: #2b3a2f;
-    padding: 8px;
-    margin: 5px 0 10px 0;
+    padding: 0.6rem 0.75rem;
+    margin: 0.3rem 0 0.6rem 0;
     border: 1px solid #b4c2a8;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #86a872;
+    box-shadow: 0 0 0 3px rgba(134, 168, 114, 0.4);
 }
 
 button {
     background-color: #2b4535;
     color: #ffffff;
-    padding: 10px;
-    margin: 15px 0 0 0;
+    padding: 0.75rem 1rem;
+    margin-top: 1rem;
     border: none;
     cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
     background-color: #7a9a5a;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
 }
 
 .tabla-datos {
     width: 100%;
     border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-th, td {
+th,
+td {
     border: 1px solid #a3b5a6;
-    padding: 8px;
+    padding: 0.6rem 0.5rem;
     text-align: center;
 }
 
@@ -148,16 +185,80 @@ td {
     color: #2b3a2f;
 }
 
+.tabla-datos tr:hover td {
+    background-color: #e0eadf;
+}
+
 footer {
     background-color: #2b4535;
     color: #ffffff;
     text-align: center;
-    padding: 12px;
+    padding: 0.75rem;
     margin-bottom: 0;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 footer p {
     color: #ffffff;
-    margin: 0;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0.75rem;
+    }
+
+    header,
+    nav,
+    section,
+    footer {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    section {
+        padding: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 0.5rem;
+    }
+
+    header,
+    nav,
+    section,
+    footer {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.35rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    nav a {
+        flex: 1 1 40%;
+        text-align: center;
+    }
+
+    .tabla-datos {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
 }
