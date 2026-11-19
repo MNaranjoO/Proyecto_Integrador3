@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estudiantes</title>
-    <link rel="stylesheet" href="estilos.css">
+    <title>Estudiantes | Sistema de Notas y Asistencias</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -16,29 +16,32 @@
     </header>
 
     <nav>
+        <a href="index.html">Inicio</a>
         <a href="estudiantes.html" class="activa">Estudiantes</a>
         <a href="profesores.html">Profesores</a>
         <a href="materias.html">Materias</a>
+        <a href="profesores_materias.html">Profesores y materias</a>
         <a href="matriculas.html">Matrículas</a>
         <a href="notas.html">Notas</a>
         <a href="asistencias.html">Asistencias</a>
         <a href="resumen.html">Resumen</a>
-        <a href="login.html">Cerrar sesión</a>
+        <a href="login.html" class="cerrar-sesion">Cerrar sesión</a>
     </nav>
 
     <main>
         <section>
             <h2>Registro de Estudiante</h2>
+            <p>Tabla independiente (<code>estudiantes</code>): registra los datos personales básicos antes de generar matrículas.</p>
 
-            <form class="formulario">
+            <form class="formulario" action="#">
                 <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre">
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. Andrés" required>
 
                 <label for="apellido">Apellido:</label>
-                <input type="text" id="apellido">
+                <input type="text" id="apellido" name="apellido" placeholder="Ej. Morales" required>
 
                 <label for="correo">Correo:</label>
-                <input type="email" id="correo">
+                <input type="email" id="correo" name="correo" placeholder="andres.morales@correo.com" required>
 
                 <button type="submit">Registrar</button>
             </form>
@@ -53,6 +56,7 @@
                         <th>Nombre</th>
                         <th>Apellido</th>
                         <th>Correo</th>
+                        <th>Materias Matriculadas</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -61,18 +65,21 @@
                         <td>Juan</td>
                         <td>Pérez</td>
                         <td>juan.perez@correo.com</td>
+                        <td>2 materias (Matrículas #1, #4)</td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Laura</td>
                         <td>Gómez</td>
                         <td>laura.gomez@correo.com</td>
+                        <td>1 materia (Matrícula #2)</td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>Carlos</td>
                         <td>Ramírez</td>
                         <td>carlos.ramirez@correo.com</td>
+                        <td>1 materia (Matrícula #3)</td>
                     </tr>
                 </tbody>
             </table>

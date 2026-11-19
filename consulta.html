@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulta de notas</title>
+    <title>Consulta de notas | Sistema de Notas y Asistencias</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,7 +12,7 @@
 
     <header>
         <h1>Sistema de Notas y Asistencias</h1>
-        <p>Consulta de notas y asistencia</p>
+        <p>Portal del estudiante</p>
     </header>
 
     <nav>
@@ -23,54 +23,157 @@
 
     <main>
         <section>
-            <h2>Datos del Estudiante</h2>
-            <p>Nombre: Juan Pérez</p>
-            <p>Correo: juan.perez@correo.com</p>
-            <p>Materias matriculadas: Lógica de Programación</p>
-            <p>Promedio general de notas: 3.5</p>
-            <p>Asistencia general: 100%</p>
+            <h2>Consultar Calificaciones y Asistencia</h2>
+            <p>Ingresa tu correo institucional y, opcionalmente, el número de matrícula para consultar tu consolidado académico, notas por actividad e historial de fechas de asistencia.</p>
+
+            <form class="formulario" action="consulta.html" method="get">
+                <label for="correoConsulta">Correo del estudiante:</label>
+                <input type="email" id="correoConsulta" name="correoConsulta" value="juan.perez@correo.com" placeholder="ejemplo@correo.com" required>
+
+                <label for="id_matricula">N.º de matrícula (opcional):</label>
+                <input type="number" id="id_matricula" name="id_matricula" min="1" placeholder="Ej. 1">
+
+                <button type="submit">Consultar</button>
+            </form>
         </section>
 
         <section>
-            <h2>Mis Notas</h2>
-            <table class="tabla-datos">
+            <h2>Resumen por Materia Matriculada</h2>
+            <p>Estudiante consultado: <strong>Juan Pérez</strong> (<code>juan.perez@correo.com</code>) — Periodo <strong>20261</strong>.</p>
+            <table class="tabla-datos tabla-resumen">
                 <thead>
                     <tr>
+                        <th>N.º Matrícula</th>
                         <th>Materia</th>
-                        <th>Actividad</th>
-                        <th>Nota</th>
+                        <th>Profesor</th>
+                        <th>Periodo</th>
+                        <th>Promedio</th>
+                        <th>Estado Nota</th>
+                        <th>Resumen de Asistencia</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
+                        <td>1</td>
                         <td>Lógica de Programación</td>
-                        <td>Taller 1</td>
-                        <td>3.2</td>
+                        <td>Elena Cárdenas</td>
+                        <td>20261</td>
+                        <td><strong>3.5</strong></td>
+                        <td><span class="badge badge-ok">Aprobando</span></td>
+                        <td>3/3 clases (100%) — Última: 2026-11-10 (Asistió)</td>
                     </tr>
                     <tr>
-                        <td>Lógica de Programación</td>
-                        <td>Examen parcial</td>
-                        <td>3.7</td>
+                        <td>4</td>
+                        <td>Base de Datos</td>
+                        <td>Jorge Medina</td>
+                        <td>20261</td>
+                        <td><strong>4.5</strong></td>
+                        <td><span class="badge badge-ok">Aprobando</span></td>
+                        <td>2/2 clases (100%) — Última: 2026-11-11 (Asistió)</td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
         <section>
-            <h2>Mi Asistencia</h2>
+            <h2>Detalle de Calificaciones por Actividad</h2>
+            <p>Desglose individual de las notas registradas en cada matrícula:</p>
             <table class="tabla-datos">
                 <thead>
                     <tr>
+                        <th>ID Nota</th>
+                        <th>N.º Matrícula</th>
                         <th>Materia</th>
-                        <th>Fecha</th>
+                        <th>Actividad</th>
+                        <th>Nota</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>Lógica de Programación</td>
+                        <td>Taller 1: Algoritmos</td>
+                        <td>2.8</td>
+                        <td><span class="badge badge-err">Reprobada</span></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>Lógica de Programación</td>
+                        <td>Examen parcial</td>
+                        <td>4.2</td>
+                        <td><span class="badge badge-ok">Aprobada</span></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>4</td>
+                        <td>Base de Datos</td>
+                        <td>Taller 1: Modelo ER</td>
+                        <td>4.4</td>
+                        <td><span class="badge badge-ok">Aprobada</span></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>4</td>
+                        <td>Base de Datos</td>
+                        <td>Laboratorio SQL</td>
+                        <td>4.6</td>
+                        <td><span class="badge badge-ok">Aprobada</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Historial Detallado de Asistencias por Fecha</h2>
+            <p>Registro cronológico de asistencia por sesión de clase:</p>
+            <table class="tabla-datos">
+                <thead>
+                    <tr>
+                        <th>ID Asistencia</th>
+                        <th>N.º Matrícula</th>
+                        <th>Materia</th>
+                        <th>Fecha de clase</th>
                         <th>Estado</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
+                        <td>1</td>
+                        <td>1</td>
                         <td>Lógica de Programación</td>
-                        <td>2026-10-02</td>
-                        <td>Asistió</td>
+                        <td>2026-11-03</td>
+                        <td><span class="badge badge-ok">Asistió</span></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>Lógica de Programación</td>
+                        <td>2026-11-05</td>
+                        <td><span class="badge badge-ok">Asistió</span></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>Lógica de Programación</td>
+                        <td>2026-11-10</td>
+                        <td><span class="badge badge-ok">Asistió</span></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>4</td>
+                        <td>Base de Datos</td>
+                        <td>2026-11-04</td>
+                        <td><span class="badge badge-ok">Asistió</span></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>4</td>
+                        <td>Base de Datos</td>
+                        <td>2026-11-11</td>
+                        <td><span class="badge badge-ok">Asistió</span></td>
                     </tr>
                 </tbody>
             </table>

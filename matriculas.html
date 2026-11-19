@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matrículas</title>
-    <link rel="stylesheet" href="estilos.css">
+    <title>Matrículas | Sistema de Notas y Asistencias</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -16,46 +16,42 @@
     </header>
 
     <nav>
+        <a href="index.html">Inicio</a>
         <a href="estudiantes.html">Estudiantes</a>
         <a href="profesores.html">Profesores</a>
         <a href="materias.html">Materias</a>
+        <a href="profesores_materias.html">Profesores y materias</a>
         <a href="matriculas.html" class="activa">Matrículas</a>
         <a href="notas.html">Notas</a>
         <a href="asistencias.html">Asistencias</a>
         <a href="resumen.html">Resumen</a>
-        <a href="login.html">Cerrar sesión</a>
+        <a href="login.html" class="cerrar-sesion">Cerrar sesión</a>
     </nav>
 
     <main>
         <section>
             <h2>Matricular Estudiante</h2>
+            <p>Tabla central (<code>matriculas</code>): vincula a un estudiante con una materia en un periodo académico (<code>anio_periodo</code>) y genera el <code>id_matricula</code> requerido para notas y asistencias.</p>
 
-            <form class="formulario">
-                <label for="estudiante">Estudiante:</label>
-                <select id="estudiante">
+            <form class="formulario" action="#">
+                <label for="id_estudiante">Estudiante:</label>
+                <select id="id_estudiante" name="id_estudiante" required>
                     <option value="">Seleccione un estudiante</option>
-                    <option value="1">Juan Pérez</option>
-                    <option value="2">Laura Gómez</option>
-                    <option value="3">Carlos Ramírez</option>
+                    <option value="1">1 - Juan Pérez (juan.perez@correo.com)</option>
+                    <option value="2">2 - Laura Gómez (laura.gomez@correo.com)</option>
+                    <option value="3">3 - Carlos Ramírez (carlos.ramirez@correo.com)</option>
                 </select>
 
-                <label for="materia">Materia:</label>
-                <select id="materia">
+                <label for="id_materia">Materia:</label>
+                <select id="id_materia" name="id_materia" required>
                     <option value="">Seleccione una materia</option>
-                    <option value="1">Lógica de Programación</option>
-                    <option value="2">Base de Datos</option>
-                    <option value="3">Introducción a la Programación</option>
+                    <option value="1">1 - Lógica de Programación</option>
+                    <option value="2">2 - Base de Datos</option>
+                    <option value="3">3 - Introducción a la Programación</option>
                 </select>
 
-                <label for="anio">Año:</label>
-                <input type="number" id="anio" value="2026">
-
-                <label for="estado">Estado:</label>
-                <select id="estado">
-                    <option value="Activa">Activa</option>
-                    <option value="Retirada">Retirada</option>
-                    <option value="Finalizada">Finalizada</option>
-                </select>
+                <label for="anio_periodo">Año / Periodo (formato entero AAAAP):</label>
+                <input type="number" id="anio_periodo" name="anio_periodo" value="20261" min="20201" max="21002" required>
 
                 <button type="submit">Matricular</button>
             </form>
@@ -66,30 +62,46 @@
             <table class="tabla-datos">
                 <thead>
                     <tr>
+                        <th>N.º Matrícula</th>
                         <th>Estudiante</th>
+                        <th>Correo</th>
                         <th>Materia</th>
-                        <th>Año</th>
-                        <th>Estado</th>
+                        <th>Profesor</th>
+                        <th>Periodo</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
+                        <td>1</td>
                         <td>Juan Pérez</td>
+                        <td>juan.perez@correo.com</td>
                         <td>Lógica de Programación</td>
-                        <td>2026</td>
-                        <td>Activa</td>
+                        <td>Elena Cárdenas</td>
+                        <td>20261</td>
                     </tr>
                     <tr>
+                        <td>2</td>
                         <td>Laura Gómez</td>
+                        <td>laura.gomez@correo.com</td>
                         <td>Base de Datos</td>
-                        <td>2026</td>
-                        <td>Finalizada</td>
+                        <td>Jorge Medina</td>
+                        <td>20261</td>
                     </tr>
                     <tr>
+                        <td>3</td>
                         <td>Carlos Ramírez</td>
+                        <td>carlos.ramirez@correo.com</td>
                         <td>Introducción a la Programación</td>
-                        <td>2026</td>
-                        <td>Retirada</td>
+                        <td>Elena Cárdenas</td>
+                        <td>20261</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Juan Pérez</td>
+                        <td>juan.perez@correo.com</td>
+                        <td>Base de Datos</td>
+                        <td>Jorge Medina</td>
+                        <td>20261</td>
                     </tr>
                 </tbody>
             </table>

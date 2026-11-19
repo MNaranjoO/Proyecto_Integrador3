@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Inicio | Sistema de Notas y Asistencias</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,33 +12,38 @@
 
     <header>
         <h1>Sistema de Notas y Asistencias</h1>
-        <p>Portal de consulta y gestión de notas</p>
+        <p>Portal de consulta y gestión académica</p>
     </header>
 
     <nav>
         <a href="index.html" class="activa">Inicio</a>
-        <a href="estudiantes.html">Estudiantes</a>
-        <a href="profesores.html">Profesores</a>
-        <a href="materias.html">Materias</a>
-        <a href="profesores_materias.html">Profesores y materias</a>
-        <a href="matriculas.html">Matrículas</a>
-        <a href="notas.html">Notas</a>
-        <a href="asistencias.html">Asistencias</a>
+        <a href="consulta.html">Consulta de notas</a>
+        <a href="login.html">Iniciar sesión</a>
     </nav>
 
     <main>
         <section>
             <h2>Bienvenido</h2>
-            <p>En este portal puedes consultar las notas y la asistencia de los estudiantes, y también gestionar esa información.</p>
-            <p>Usa el menú de arriba para entrar a cada sección:</p>
+            <p>En este portal los estudiantes pueden consultar sus calificaciones detalladas y su historial de asistencia por fecha, y los profesores pueden gestionar toda la información académica del sistema.</p>
+            <p>Selecciona tu perfil para ingresar:</p>
             <ul>
-                <li><a href="estudiantes.html">Estudiantes</a>: registro de estudiantes</li>
-                <li><a href="profesores.html">Profesores</a>: registro de profesores</li>
-                <li><a href="materias.html">Materias</a>: lista de materias</li>
-                <li><a href="profesores_materias.html">Profesores y materias</a>: qué materia dicta cada profesor</li>
-                <li><a href="matriculas.html">Matrículas</a>: estudiantes inscritos en cada materia</li>
-                <li><a href="notas.html">Notas</a>: calificaciones por actividad</li>
-                <li><a href="asistencias.html">Asistencias</a>: registro de asistencia</li>
+                <li><a href="consulta.html">Consulta de notas (Estudiantes)</a>: revisa tus materias matriculadas, promedio acumulado, notas por actividad y fechas exactas de asistencia.</li>
+                <li><a href="login.html">Iniciar sesión (Profesores)</a>: accede al panel administrativo para gestionar estudiantes, profesores, materias, matrículas, notas y asistencias.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Módulos del Panel del Profesor</h2>
+            <p>Estructura funcional alineada con las 7 tablas del Modelo Relacional:</p>
+            <ul>
+                <li><a href="estudiantes.html">Estudiantes</a>: registro y listado general de estudiantes.</li>
+                <li><a href="profesores.html">Profesores</a>: registro y listado general de docentes.</li>
+                <li><a href="materias.html">Materias</a>: catálogo de asignaturas y descripciones.</li>
+                <li><a href="profesores_materias.html">Profesores y materias</a>: asignación de las materias que dicta cada profesor.</li>
+                <li><a href="matriculas.html">Matrículas</a>: inscripción de estudiantes en materias por periodo académico.</li>
+                <li><a href="notas.html">Notas</a>: registro de calificaciones por actividad asociadas a cada matrícula.</li>
+                <li><a href="asistencias.html">Asistencias</a>: control de asistencia por fecha asociada a cada matrícula.</li>
+                <li><a href="resumen.html">Resumen</a>: conteo global del sistema y consolidado académico por matrícula.</li>
             </ul>
         </section>
     </main>

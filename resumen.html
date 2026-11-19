@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resumen</title>
-    <link rel="stylesheet" href="estilos.css">
+    <title>Resumen | Sistema de Notas y Asistencias</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -16,25 +16,29 @@
     </header>
 
     <nav>
+        <a href="index.html">Inicio</a>
         <a href="estudiantes.html">Estudiantes</a>
         <a href="profesores.html">Profesores</a>
         <a href="materias.html">Materias</a>
+        <a href="profesores_materias.html">Profesores y materias</a>
         <a href="matriculas.html">Matrículas</a>
         <a href="notas.html">Notas</a>
         <a href="asistencias.html">Asistencias</a>
         <a href="resumen.html" class="activa">Resumen</a>
-        <a href="login.html">Cerrar sesión</a>
+        <a href="login.html" class="cerrar-sesion">Cerrar sesión</a>
     </nav>
 
     <main>
         <section>
-            <h2>Resumen General</h2>
+            <h2>Resumen General del Sistema</h2>
+            <p>Conteo total de registros almacenados en cada una de las 7 tablas del Modelo Relacional:</p>
             <table class="tabla-datos">
                 <thead>
                     <tr>
                         <th>Estudiantes</th>
                         <th>Profesores</th>
                         <th>Materias</th>
+                        <th>Prof. - Materias</th>
                         <th>Matrículas</th>
                         <th>Notas</th>
                         <th>Asistencias</th>
@@ -46,54 +50,75 @@
                         <td>2</td>
                         <td>3</td>
                         <td>3</td>
-                        <td>3</td>
-                        <td>3</td>
+                        <td>4</td>
+                        <td>6</td>
+                        <td>9</td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
         <section>
-            <h2>Resumen por Estudiante</h2>
+            <h2>Consolidado Académico por Matrícula</h2>
+            <p>Cruce relacional de matrículas con promedios calculados y seguimiento detallado de asistencias por fecha:</p>
             <table class="tabla-datos tabla-resumen">
                 <thead>
                     <tr>
-                        <th>N.º de matrícula</th>
+                        <th>N.º Matrícula</th>
                         <th>Estudiante</th>
-                        <th>Correo</th>
                         <th>Materia</th>
-                        <th>Estado</th>
+                        <th>Profesor</th>
+                        <th>Periodo</th>
+                        <th>Notas Reg.</th>
                         <th>Promedio</th>
-                        <th>Asistencia</th>
+                        <th>Estado</th>
+                        <th>Seguimiento de Asistencias</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>7</td>
+                        <td>1</td>
                         <td>Juan Pérez</td>
-                        <td>juan.perez@correo.com</td>
                         <td>Lógica de Programación</td>
-                        <td>Activa</td>
-                        <td>3.5</td>
-                        <td>Asistió</td>
+                        <td>Elena Cárdenas</td>
+                        <td>20261</td>
+                        <td>2</td>
+                        <td><strong>3.5</strong></td>
+                        <td><span class="badge badge-ok">Aprobando</span></td>
+                        <td>3/3 clases (100%) — Última: 2026-11-10 (Asistió)</td>
                     </tr>
                     <tr>
-                        <td>8</td>
+                        <td>2</td>
                         <td>Laura Gómez</td>
-                        <td>laura.gomez@correo.com</td>
                         <td>Base de Datos</td>
-                        <td>Finalizada</td>
-                        <td>3.3</td>
-                        <td>No asistió</td>
+                        <td>Jorge Medina</td>
+                        <td>20261</td>
+                        <td>2</td>
+                        <td><strong>3.7</strong></td>
+                        <td><span class="badge badge-ok">Aprobando</span></td>
+                        <td>1/2 clases (50%) — Última: 2026-11-11 (No asistió)</td>
                     </tr>
                     <tr>
-                        <td>9</td>
+                        <td>3</td>
                         <td>Carlos Ramírez</td>
-                        <td>carlos.ramirez@correo.com</td>
                         <td>Introducción a la Programación</td>
-                        <td>Retirada</td>
+                        <td>Elena Cárdenas</td>
+                        <td>20261</td>
+                        <td>0</td>
                         <td>Sin notas</td>
-                        <td>Justificada</td>
+                        <td><span class="badge badge-neutral">Sin calificar</span></td>
+                        <td>0/2 clases (0%, 1 justificada) — Última: 2026-11-13 (No asistió)</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Juan Pérez</td>
+                        <td>Base de Datos</td>
+                        <td>Jorge Medina</td>
+                        <td>20261</td>
+                        <td>2</td>
+                        <td><strong>4.5</strong></td>
+                        <td><span class="badge badge-ok">Aprobando</span></td>
+                        <td>2/2 clases (100%) — Última: 2026-11-11 (Asistió)</td>
                     </tr>
                 </tbody>
             </table>

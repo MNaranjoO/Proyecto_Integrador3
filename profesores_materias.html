@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profesores y materias | Sistema de Notas y Asistencias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Sistema de Notas y Asistencias</h1>
+        <p>Panel del profesor</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="estudiantes.html">Estudiantes</a>
+        <a href="profesores.html">Profesores</a>
+        <a href="materias.html">Materias</a>
+        <a href="profesores_materias.html" class="activa">Profesores y materias</a>
+        <a href="matriculas.html">Matrículas</a>
+        <a href="notas.html">Notas</a>
+        <a href="asistencias.html">Asistencias</a>
+        <a href="resumen.html">Resumen</a>
+        <a href="login.html" class="cerrar-sesion">Cerrar sesión</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Asignar Materia a Profesor</h2>
+            <p>Tabla intermedia (<code>profesores_materias</code>): resuelve la relación muchos a muchos permitiendo que un profesor dicte varias materias.</p>
+
+            <form class="formulario" action="#">
+                <label for="id_profesor">Profesor:</label>
+                <select id="id_profesor" name="id_profesor" required>
+                    <option value="">Seleccione un profesor</option>
+                    <option value="1">1 - Elena Cárdenas (elena.cardenas@correo.com)</option>
+                    <option value="2">2 - Jorge Medina (jorge.medina@correo.com)</option>
+                </select>
+
+                <label for="id_materia">Materia:</label>
+                <select id="id_materia" name="id_materia" required>
+                    <option value="">Seleccione una materia</option>
+                    <option value="1">1 - Lógica de Programación</option>
+                    <option value="2">2 - Base de Datos</option>
+                    <option value="3">3 - Introducción a la Programación</option>
+                </select>
+
+                <button type="submit">Asignar</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Asignaciones registradas</h2>
+            <table class="tabla-datos">
+                <thead>
+                    <tr>
+                        <th>ID Asignación</th>
+                        <th>Profesor</th>
+                        <th>Correo</th>
+                        <th>Materia</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Elena Cárdenas</td>
+                        <td>elena.cardenas@correo.com</td>
+                        <td>Lógica de Programación</td>
+                        <td>Fundamentos de algoritmos y pseudocódigo</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jorge Medina</td>
+                        <td>jorge.medina@correo.com</td>
+                        <td>Base de Datos</td>
+                        <td>Modelo relacional y consultas SQL</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Elena Cárdenas</td>
+                        <td>elena.cardenas@correo.com</td>
+                        <td>Introducción a la Programación</td>
+                        <td>Variables, condicionales y ciclos</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>Sistema de Notas y Asistencias - 2026</p>
+    </footer>
+
+</body>
+
+</html>

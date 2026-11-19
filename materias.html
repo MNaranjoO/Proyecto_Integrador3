@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Materias</title>
-    <link rel="stylesheet" href="estilos.css">
+    <title>Materias | Sistema de Notas y Asistencias</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -16,26 +16,29 @@
     </header>
 
     <nav>
+        <a href="index.html">Inicio</a>
         <a href="estudiantes.html">Estudiantes</a>
         <a href="profesores.html">Profesores</a>
         <a href="materias.html" class="activa">Materias</a>
+        <a href="profesores_materias.html">Profesores y materias</a>
         <a href="matriculas.html">Matrículas</a>
         <a href="notas.html">Notas</a>
         <a href="asistencias.html">Asistencias</a>
         <a href="resumen.html">Resumen</a>
-        <a href="login.html">Cerrar sesión</a>
+        <a href="login.html" class="cerrar-sesion">Cerrar sesión</a>
     </nav>
 
     <main>
         <section>
             <h2>Registro de Materia</h2>
+            <p>Tabla catálogo (<code>materias</code>): define las asignaturas disponibles en el plan de estudios.</p>
 
-            <form class="formulario">
+            <form class="formulario" action="#">
                 <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre">
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. Estructura de Datos" required>
 
                 <label for="descripcion">Descripción:</label>
-                <input type="text" id="descripcion">
+                <input type="text" id="descripcion" name="descripcion" placeholder="Ej. Listas, pilas, colas y árboles" required>
 
                 <button type="submit">Registrar</button>
             </form>
@@ -49,6 +52,8 @@
                         <th>ID</th>
                         <th>Materia</th>
                         <th>Descripción</th>
+                        <th>Profesor Asignado</th>
+                        <th>Inscritos</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -56,16 +61,22 @@
                         <td>1</td>
                         <td>Lógica de Programación</td>
                         <td>Fundamentos de algoritmos y pseudocódigo</td>
+                        <td>Elena Cárdenas</td>
+                        <td>1 estudiante</td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Base de Datos</td>
-                        <td>Modelo relacional y consultas</td>
+                        <td>Modelo relacional y consultas SQL</td>
+                        <td>Jorge Medina</td>
+                        <td>2 estudiantes</td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>Introducción a la Programación</td>
                         <td>Variables, condicionales y ciclos</td>
+                        <td>Elena Cárdenas</td>
+                        <td>1 estudiante</td>
                     </tr>
                 </tbody>
             </table>

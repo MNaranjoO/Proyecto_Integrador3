@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar sesión</title>
+    <title>Iniciar sesión | Sistema de Notas y Asistencias</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -24,14 +24,14 @@
     <main>
         <section>
             <h2>Ingreso de Profesor</h2>
-            <p>Registra estudiantes, notas y asistencias.</p>
+            <p>Inicia sesión con tu correo institucional para gestionar estudiantes, profesores, materias, matrículas, notas y asistencias.</p>
 
             <form class="formulario" action="estudiantes.html">
                 <label for="correoProfesor">Correo:</label>
-                <input type="email" id="correoProfesor">
+                <input type="email" id="correoProfesor" name="correoProfesor" placeholder="elena.cardenas@correo.com" required>
 
                 <label for="claveProfesor">Contraseña:</label>
-                <input type="password" id="claveProfesor">
+                <input type="password" id="claveProfesor" name="claveProfesor" placeholder="Ingresa tu contraseña" required>
 
                 <button type="submit">Ingresar como profesor</button>
             </form>

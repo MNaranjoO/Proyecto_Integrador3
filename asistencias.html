@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asistencias</title>
-    <link rel="stylesheet" href="estilos.css">
+    <title>Asistencias | Sistema de Notas y Asistencias</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -16,42 +16,38 @@
     </header>
 
     <nav>
+        <a href="index.html">Inicio</a>
         <a href="estudiantes.html">Estudiantes</a>
         <a href="profesores.html">Profesores</a>
         <a href="materias.html">Materias</a>
+        <a href="profesores_materias.html">Profesores y materias</a>
         <a href="matriculas.html">Matrículas</a>
         <a href="notas.html">Notas</a>
         <a href="asistencias.html" class="activa">Asistencias</a>
         <a href="resumen.html">Resumen</a>
-        <a href="login.html">Cerrar sesión</a>
+        <a href="login.html" class="cerrar-sesion">Cerrar sesión</a>
     </nav>
 
     <main>
         <section>
             <h2>Registro de Asistencia</h2>
+            <p>Tabla dependiente (<code>asistencias</code>): registra la asistencia por sesión de clase (<code>fecha</code>) y estado controlado (<code>ENUM</code>) sobre una matrícula.</p>
 
-            <form class="formulario">
-                <label for="estudiante">Estudiante:</label>
-                <select id="estudiante">
-                    <option value="">Seleccione un estudiante</option>
-                    <option value="1">Juan Pérez</option>
-                    <option value="2">Laura Gómez</option>
-                    <option value="3">Carlos Ramírez</option>
+            <form class="formulario" action="#">
+                <label for="id_matricula">Matrícula (Estudiante - Materia):</label>
+                <select id="id_matricula" name="id_matricula" required>
+                    <option value="">Seleccione una matrícula</option>
+                    <option value="1">Matrícula #1 - Juan Pérez (Lógica de Programación)</option>
+                    <option value="2">Matrícula #2 - Laura Gómez (Base de Datos)</option>
+                    <option value="3">Matrícula #3 - Carlos Ramírez (Introducción a la Programación)</option>
+                    <option value="4">Matrícula #4 - Juan Pérez (Base de Datos)</option>
                 </select>
 
-                <label for="materia">Materia:</label>
-                <select id="materia">
-                    <option value="">Seleccione una materia</option>
-                    <option value="1">Lógica de Programación</option>
-                    <option value="2">Base de Datos</option>
-                    <option value="3">Introducción a la Programación</option>
-                </select>
-
-                <label for="fecha">Fecha:</label>
-                <input type="date" id="fecha">
+                <label for="fecha">Fecha de la clase:</label>
+                <input type="date" id="fecha" name="fecha" required>
 
                 <label for="estado">Estado:</label>
-                <select id="estado">
+                <select id="estado" name="estado" required>
                     <option value="Asistió">Asistió</option>
                     <option value="No asistió">No asistió</option>
                     <option value="Justificada">Justificada</option>
@@ -66,6 +62,8 @@
             <table class="tabla-datos">
                 <thead>
                     <tr>
+                        <th>ID Asistencia</th>
+                        <th>N.º Matrícula</th>
                         <th>Estudiante</th>
                         <th>Materia</th>
                         <th>Fecha</th>
@@ -74,22 +72,76 @@
                 </thead>
                 <tbody>
                     <tr>
+                        <td>1</td>
+                        <td>1</td>
                         <td>Juan Pérez</td>
                         <td>Lógica de Programación</td>
-                        <td>2026-10-02</td>
-                        <td>Asistió</td>
+                        <td>2026-11-03</td>
+                        <td><span class="badge badge-ok">Asistió</span></td>
                     </tr>
                     <tr>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>Juan Pérez</td>
+                        <td>Lógica de Programación</td>
+                        <td>2026-11-05</td>
+                        <td><span class="badge badge-ok">Asistió</span></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>Juan Pérez</td>
+                        <td>Lógica de Programación</td>
+                        <td>2026-11-10</td>
+                        <td><span class="badge badge-ok">Asistió</span></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>2</td>
                         <td>Laura Gómez</td>
                         <td>Base de Datos</td>
-                        <td>2026-10-03</td>
-                        <td>No asistió</td>
+                        <td>2026-11-04</td>
+                        <td><span class="badge badge-ok">Asistió</span></td>
                     </tr>
                     <tr>
+                        <td>5</td>
+                        <td>2</td>
+                        <td>Laura Gómez</td>
+                        <td>Base de Datos</td>
+                        <td>2026-11-11</td>
+                        <td><span class="badge badge-err">No asistió</span></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>3</td>
                         <td>Carlos Ramírez</td>
                         <td>Introducción a la Programación</td>
-                        <td>2026-10-04</td>
-                        <td>Justificada</td>
+                        <td>2026-11-06</td>
+                        <td><span class="badge badge-warn">Justificada</span></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>3</td>
+                        <td>Carlos Ramírez</td>
+                        <td>Introducción a la Programación</td>
+                        <td>2026-11-13</td>
+                        <td><span class="badge badge-err">No asistió</span></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>4</td>
+                        <td>Juan Pérez</td>
+                        <td>Base de Datos</td>
+                        <td>2026-11-04</td>
+                        <td><span class="badge badge-ok">Asistió</span></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>4</td>
+                        <td>Juan Pérez</td>
+                        <td>Base de Datos</td>
+                        <td>2026-11-11</td>
+                        <td><span class="badge badge-ok">Asistió</span></td>
                     </tr>
                 </tbody>
             </table>
