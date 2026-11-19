@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estudiantes</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
@@ -16,7 +16,10 @@
     </header>
 
     <nav>
-        <a href="estudiantes.html">Estudiantes</a>
+        <a href="estudiantes.html" class="activa">Estudiantes</a>
+        <a href="profesores.html">Profesores</a>
+        <a href="materias.html">Materias</a>
+        <a href="matriculas.html">Matrículas</a>
         <a href="notas.html">Notas</a>
         <a href="asistencias.html">Asistencias</a>
         <a href="resumen.html">Resumen</a>
@@ -37,44 +40,7 @@
                 <label for="correo">Correo:</label>
                 <input type="email" id="correo">
 
-                <label for="telefono">Teléfono:</label>
-                <input type="tel" id="telefono">
-
                 <button type="submit">Registrar</button>
-            </form>
-        </section>
-
-        <section>
-            <h2>Matricular Estudiante</h2>
-
-            <form class="formulario">
-                <label for="estudianteMatricula">Estudiante:</label>
-                <select id="estudianteMatricula">
-                    <option value="">Seleccione un estudiante</option>
-                    <option value="1">Juan Pérez</option>
-                    <option value="2">Laura Gómez</option>
-                    <option value="3">Carlos Ramírez</option>
-                </select>
-
-                <label for="materiaMatricula">Materia:</label>
-                <select id="materiaMatricula">
-                    <option value="">Seleccione una materia</option>
-                    <option value="1">Lógica de Programación</option>
-                    <option value="2">Base de Datos</option>
-                    <option value="3">Introducción a la Programación</option>
-                </select>
-
-                <label for="fechaMatricula">Fecha de matrícula:</label>
-                <input type="date" id="fechaMatricula">
-
-                <label for="estadoMatricula">Estado:</label>
-                <select id="estadoMatricula">
-                    <option value="Activa">Activa</option>
-                    <option value="Retirada">Retirada</option>
-                    <option value="Finalizada">Finalizada</option>
-                </select>
-
-                <button type="submit">Matricular</button>
             </form>
         </section>
 
@@ -87,7 +53,6 @@
                         <th>Nombre</th>
                         <th>Apellido</th>
                         <th>Correo</th>
-                        <th>Teléfono</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -96,21 +61,18 @@
                         <td>Juan</td>
                         <td>Pérez</td>
                         <td>juan.perez@correo.com</td>
-                        <td>3001112233</td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Laura</td>
                         <td>Gómez</td>
                         <td>laura.gomez@correo.com</td>
-                        <td>3004445566</td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>Carlos</td>
                         <td>Ramírez</td>
                         <td>carlos.ramirez@correo.com</td>
-                        <td>3007778899</td>
                     </tr>
                 </tbody>
             </table>

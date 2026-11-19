@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resumen Académico</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Resumen</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
@@ -17,74 +17,89 @@
 
     <nav>
         <a href="estudiantes.html">Estudiantes</a>
+        <a href="profesores.html">Profesores</a>
+        <a href="materias.html">Materias</a>
+        <a href="matriculas.html">Matrículas</a>
         <a href="notas.html">Notas</a>
         <a href="asistencias.html">Asistencias</a>
-        <a href="resumen.html">Resumen</a>
+        <a href="resumen.html" class="activa">Resumen</a>
         <a href="login.html">Cerrar sesión</a>
     </nav>
 
     <main>
-        <section id="datos-generales">
-            <h2>Datos Generales</h2>
-            <p>Estudiantes registrados: 3</p>
-            <p>Materias registradas: 3</p>
-            <p>Matrículas activas: 4</p>
-            <p>Notas registradas: 5</p>
-            <p>Promedio general de notas: 4.08</p>
-            <p>Asistencia general: 80%</p>
-        </section>
-
         <section>
-            <h2>Resumen por Matrícula</h2>
+            <h2>Resumen General</h2>
             <table class="tabla-datos">
                 <thead>
                     <tr>
-                        <th>Estudiante</th>
-                        <th>Materia</th>
-                        <th>Promedio</th>
-                        <th>Asistió</th>
-                        <th>No asistió</th>
-                        <th>% Asistencia</th>
+                        <th>Estudiantes</th>
+                        <th>Profesores</th>
+                        <th>Materias</th>
+                        <th>Matrículas</th>
+                        <th>Notas</th>
+                        <th>Asistencias</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Juan Pérez</td>
-                        <td>Lógica de Programación</td>
-                        <td>4.2</td>
+                        <td>3</td>
                         <td>2</td>
-                        <td>0</td>
-                        <td>100%</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>3</td>
                     </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Resumen por Estudiante</h2>
+            <table class="tabla-datos tabla-resumen">
+                <thead>
                     <tr>
-                        <td>Laura Gómez</td>
-                        <td>Base de Datos</td>
-                        <td>4.0</td>
-                        <td>1</td>
-                        <td>0</td>
-                        <td>100%</td>
+                        <th>N.º de matrícula</th>
+                        <th>Estudiante</th>
+                        <th>Correo</th>
+                        <th>Materia</th>
+                        <th>Estado</th>
+                        <th>Promedio</th>
+                        <th>Asistencia</th>
                     </tr>
+                </thead>
+                <tbody>
                     <tr>
-                        <td>Carlos Ramírez</td>
-                        <td>Introducción a la Programación</td>
-                        <td>3.8</td>
-                        <td>0</td>
-                        <td>1</td>
-                        <td>0%</td>
-                    </tr>
-                    <tr>
+                        <td>7</td>
                         <td>Juan Pérez</td>
+                        <td>juan.perez@correo.com</td>
+                        <td>Lógica de Programación</td>
+                        <td>Activa</td>
+                        <td>3.5</td>
+                        <td>Asistió</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Laura Gómez</td>
+                        <td>laura.gomez@correo.com</td>
                         <td>Base de Datos</td>
-                        <td>4.2</td>
-                        <td>1</td>
-                        <td>0</td>
-                        <td>100%</td>
+                        <td>Finalizada</td>
+                        <td>3.3</td>
+                        <td>No asistió</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Carlos Ramírez</td>
+                        <td>carlos.ramirez@correo.com</td>
+                        <td>Introducción a la Programación</td>
+                        <td>Retirada</td>
+                        <td>Sin notas</td>
+                        <td>Justificada</td>
                     </tr>
                 </tbody>
             </table>
         </section>
     </main>
-    
+
     <footer>
         <p>Sistema de Notas y Asistencias - 2026</p>
     </footer>

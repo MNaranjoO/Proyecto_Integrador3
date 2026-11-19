@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notas</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
@@ -17,7 +17,10 @@
 
     <nav>
         <a href="estudiantes.html">Estudiantes</a>
-        <a href="notas.html">Notas</a>
+        <a href="profesores.html">Profesores</a>
+        <a href="materias.html">Materias</a>
+        <a href="matriculas.html">Matrículas</a>
+        <a href="notas.html" class="activa">Notas</a>
         <a href="asistencias.html">Asistencias</a>
         <a href="resumen.html">Resumen</a>
         <a href="login.html">Cerrar sesión</a>
@@ -28,30 +31,27 @@
             <h2>Registro de Notas</h2>
 
             <form class="formulario">
-                <label for="estudianteNota">Estudiante:</label>
-                <select id="estudianteNota">
+                <label for="estudiante">Estudiante:</label>
+                <select id="estudiante">
                     <option value="">Seleccione un estudiante</option>
                     <option value="1">Juan Pérez</option>
                     <option value="2">Laura Gómez</option>
                     <option value="3">Carlos Ramírez</option>
                 </select>
 
-                <label for="materiaNota">Materia:</label>
-                <select id="materiaNota">
+                <label for="materia">Materia:</label>
+                <select id="materia">
                     <option value="">Seleccione una materia</option>
                     <option value="1">Lógica de Programación</option>
                     <option value="2">Base de Datos</option>
                     <option value="3">Introducción a la Programación</option>
                 </select>
 
-                <label for="tema">Tema calificado:</label>
-                <input type="text" id="tema">
+                <label for="actividad">Actividad:</label>
+                <input type="text" id="actividad">
 
-                <label for="nota">Valor:</label>
+                <label for="nota">Nota:</label>
                 <input type="number" id="nota" min="0" max="5" step="0.1">
-
-                <label for="fechaNota">Fecha:</label>
-                <input type="date" id="fechaNota">
 
                 <button type="submit">Guardar Nota</button>
             </form>
@@ -64,46 +64,28 @@
                     <tr>
                         <th>Estudiante</th>
                         <th>Materia</th>
-                        <th>Tema calificado</th>
+                        <th>Actividad</th>
                         <th>Nota</th>
-                        <th>Fecha</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Juan Pérez</td>
                         <td>Lógica de Programación</td>
-                        <td>Diagramas de flujo</td>
-                        <td>4.5</td>
-                        <td>2026-10-07</td>
+                        <td>Taller 1</td>
+                        <td>3.2</td>
                     </tr>
                     <tr>
                         <td>Laura Gómez</td>
                         <td>Base de Datos</td>
-                        <td>Consultas SQL</td>
-                        <td>4.0</td>
-                        <td>2026-10-07</td>
-                    </tr>
-                    <tr>
-                        <td>Carlos Ramírez</td>
-                        <td>Introducción a la Programación</td>
-                        <td>Variables y tipos de datos</td>
-                        <td>3.8</td>
-                        <td>2026-10-07</td>
+                        <td>Taller 1</td>
+                        <td>3.3</td>
                     </tr>
                     <tr>
                         <td>Juan Pérez</td>
                         <td>Lógica de Programación</td>
-                        <td>Pseudocódigo</td>
-                        <td>3.9</td>
-                        <td>2026-10-07</td>
-                    </tr>
-                    <tr>
-                        <td>Juan Pérez</td>
-                        <td>Base de Datos</td>
-                        <td>Modelo entidad-relación</td>
-                        <td>4.2</td>
-                        <td>2026-10-07</td>
+                        <td>Examen parcial</td>
+                        <td>3.7</td>
                     </tr>
                 </tbody>
             </table>

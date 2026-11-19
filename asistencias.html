@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asistencias</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
@@ -15,11 +15,13 @@
         <p>Panel del profesor</p>
     </header>
 
-
     <nav>
         <a href="estudiantes.html">Estudiantes</a>
+        <a href="profesores.html">Profesores</a>
+        <a href="materias.html">Materias</a>
+        <a href="matriculas.html">Matrículas</a>
         <a href="notas.html">Notas</a>
-        <a href="asistencias.html">Asistencias</a>
+        <a href="asistencias.html" class="activa">Asistencias</a>
         <a href="resumen.html">Resumen</a>
         <a href="login.html">Cerrar sesión</a>
     </nav>
@@ -29,16 +31,16 @@
             <h2>Registro de Asistencia</h2>
 
             <form class="formulario">
-                <label for="estudianteAsistencia">Estudiante:</label>
-                <select id="estudianteAsistencia">
+                <label for="estudiante">Estudiante:</label>
+                <select id="estudiante">
                     <option value="">Seleccione un estudiante</option>
                     <option value="1">Juan Pérez</option>
                     <option value="2">Laura Gómez</option>
                     <option value="3">Carlos Ramírez</option>
                 </select>
 
-                <label for="materiaAsistencia">Materia:</label>
-                <select id="materiaAsistencia">
+                <label for="materia">Materia:</label>
+                <select id="materia">
                     <option value="">Seleccione una materia</option>
                     <option value="1">Lógica de Programación</option>
                     <option value="2">Base de Datos</option>
@@ -52,6 +54,7 @@
                 <select id="estado">
                     <option value="Asistió">Asistió</option>
                     <option value="No asistió">No asistió</option>
+                    <option value="Justificada">Justificada</option>
                 </select>
 
                 <button type="submit">Guardar Asistencia</button>
@@ -73,32 +76,20 @@
                     <tr>
                         <td>Juan Pérez</td>
                         <td>Lógica de Programación</td>
-                        <td>2026-10-06</td>
+                        <td>2026-10-02</td>
                         <td>Asistió</td>
                     </tr>
                     <tr>
                         <td>Laura Gómez</td>
                         <td>Base de Datos</td>
-                        <td>2026-10-06</td>
-                        <td>Asistió</td>
+                        <td>2026-10-03</td>
+                        <td>No asistió</td>
                     </tr>
                     <tr>
                         <td>Carlos Ramírez</td>
                         <td>Introducción a la Programación</td>
-                        <td>2026-10-06</td>
-                        <td>No asistió</td>
-                    </tr>
-                    <tr>
-                        <td>Juan Pérez</td>
-                        <td>Lógica de Programación</td>
-                        <td>2026-10-07</td>
-                        <td>Asistió</td>
-                    </tr>
-                    <tr>
-                        <td>Juan Pérez</td>
-                        <td>Base de Datos</td>
-                        <td>2026-10-07</td>
-                        <td>Asistió</td>
+                        <td>2026-10-04</td>
+                        <td>Justificada</td>
                     </tr>
                 </tbody>
             </table>

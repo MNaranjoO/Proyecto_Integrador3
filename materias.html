@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materias</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Sistema de Notas y Asistencias</h1>
+        <p>Panel del profesor</p>
+    </header>
+
+    <nav>
+        <a href="estudiantes.html">Estudiantes</a>
+        <a href="profesores.html">Profesores</a>
+        <a href="materias.html" class="activa">Materias</a>
+        <a href="matriculas.html">Matrículas</a>
+        <a href="notas.html">Notas</a>
+        <a href="asistencias.html">Asistencias</a>
+        <a href="resumen.html">Resumen</a>
+        <a href="login.html">Cerrar sesión</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Registro de Materia</h2>
+
+            <form class="formulario">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre">
+
+                <label for="descripcion">Descripción:</label>
+                <input type="text" id="descripcion">
+
+                <button type="submit">Registrar</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Materias registradas</h2>
+            <table class="tabla-datos">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Materia</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Lógica de Programación</td>
+                        <td>Fundamentos de algoritmos y pseudocódigo</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Base de Datos</td>
+                        <td>Modelo relacional y consultas</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Introducción a la Programación</td>
+                        <td>Variables, condicionales y ciclos</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>Sistema de Notas y Asistencias - 2026</p>
+    </footer>
+
+</body>
+
+</html>
